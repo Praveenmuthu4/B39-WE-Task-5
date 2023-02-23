@@ -1,0 +1,47 @@
+Question-1
+const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+const odds = [];
+numbers.forEach((num) => {
+  if (num % 2 === 1) {
+    odds.push(num);
+  }
+});
+console.log(odds);
+
+Question-2
+function titleCase(title) {
+  return title
+    .toLowerCase()
+    .split(" ")
+    .reduce(
+      (s, c) => s + "" + (c.charAt(0).toUpperCase() + c.slice(1) + " "),
+      ""
+    );
+}
+console.log(titleCase("guvi geek zen fullstack"));
+
+Question-3
+sum = (a, b) => {
+  return a + b;
+};
+x = sum(10, 30);
+console.log(x);
+
+Question-4
+const newArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+const myPrimeArray = newArray.filter(num => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+});
+console.log(myPrimeArray);
+
+Question-5
+const Palindromes = function (words) {
+    return words.filter(function (word) {
+       return word.split("").reverse().join("") === word;
+     });
+   };
+   
+   console.log(Palindromes(["hello", "noon","madam","apple","racecar"]));
